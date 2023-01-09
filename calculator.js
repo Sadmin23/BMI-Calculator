@@ -4,9 +4,9 @@ const express = require("express");
 const app = express();
 
 app.get("/",function(request, respond){
-    respond.send("<h1>Calculator</h1>")
-})
+    respond.sendFile(__dirname + "/index.html")
+});
 
 app.listen(3000,function(){
-    console.log("Server started at 3000");
-})
+    console.log("Server started at port 3000");
+});
